@@ -1,0 +1,33 @@
+html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Publicación</title>
+</head>
+<body>
+<h1>Publicar Contenido</h1>
+<form action="/publicar" method="post">
+    <label for="titulo">Título:</label><br>
+    <input type="text" id="titulo" name="titulo" required><br><br>
+    
+    <label for="contenido">Contenido:</label><br>
+    <textarea id="contenido" name="contenido" rows="4" cols="50" required></textarea><br><br>
+    
+    <label for="usuario">Usuario:</label><br>
+    <select id="usuario" name="usuario" required>
+        <option value="usuario1">Usuario 1</option>
+        <option value="usuario2">Usuario 2</option>
+        <option value="usuario3">Usuario 3</option>
+        <option value="usuario4">Usuario 4</option>
+        <option value="usuario5">Usuario 5</option>
+        <option value="usuario6">Usuario 6</option>
+        <option value="usuario7">Usuario 7</option>
+        <option value="usuario8">Usuario 8</option>
+    </select><br><br>
+    
+    <button type="submit">Publicar</button>
+</form>
+</body>
+</html>
