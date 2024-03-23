@@ -7,10 +7,10 @@ Lo correcto es que el resultado sea similar al siguiente:<br>
 ![git status](/img/.readme/git-status.png)
 Si no tuviste problemas con git, procedemos a clonar.
 4. `git clone git@github.com:iicarlosjimenez/devto_js.git`. Para clonar el proyecto
-5. `cd practica_grupo3_G32`. Para acceder al proyecto
-6. `git checkout development`. Para saltar a la rama con los cambios actuales.
+5. `cd devto_js`. Para acceder al proyecto
+6. `git checkout develop`. Para saltar a la rama con los cambios actuales.
 7. Creamos una rama con el formato "feat/{nombre}" donde {nombre} debe ser reemplazado por el nombre de nuestro "feature". 
-Por ejemplo si mi feature es "header", el comando que debo ejecutar debe ser `git checkout -b feat/header`. Si me feature es "posts", el comando que debo ejecutar debe ser `git checkout -b feat/posts`.
+Por ejemplo si mi feature es "store", el comando que debo ejecutar debe ser `git checkout -b feat/store`. Si me feature es "posts", el comando que debo ejecutar debe ser `git checkout -b feat/posts`.
 
 # Guiarse de la página de dev.to
 1. Vamos a la página de [DEV.TO](https://dev.to)
