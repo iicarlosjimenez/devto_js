@@ -44,6 +44,33 @@ const storePost = async (data) => {
   } catch (error) {
     console.error("Hubo un problema con la solicitud fetch:", error);
   }
+} 
+
+//Realizar solicitud de actualizar post 
+const updatePost = async (data, id) => {
+  let endpoint = "https://devto-api.kodinc.dev/api/articulos/" + id; // le falta el id
+  const requestOptions = {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  };
+  
+  //Solicitud PUT
+  try {
+    const response = await fetch(endpoint,requestOptions)
+    if (!response.ok) {
+      throw new Error (
+        "Ocurrio un error al realizar la solicitud" + response.status
+        )
+      }
+    
+      const updateData = await response.json()
+      return updateData
+  } catch (error) {
+    console.error ("Hubo un problema con la solicitud fetch:", error)
+  }
 }
 
   
@@ -61,5 +88,5 @@ async function getUsers() {
   }
 }
   // Llamar a la función para obtener los datos
-export { getPosts,getUsers,storePost }
+export { getPosts,getUsers,storePost,updatePost}
 
