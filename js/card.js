@@ -106,9 +106,15 @@ function createPost(post) {
   commentImg.src = "./img/svg/icon-comment.svg";
   minReadSvg.src = "./img/svg/icon-bookmark.svg";
 
+  // Formatear la fecha de creación
+  var createdDate = new Date(post.created_at);
+  var month = createdDate.toLocaleString('default', { month: 'short' });
+  var day = createdDate.getDate();
+  var formattedDate = month + ' ' + day;
+
   // informacion de uso
   name.innerHTML = post.user.name;
-  date.innerHTML = post.created_at;
+  date.innerHTML = formattedDate;
   identionTitle.innerHTML = post.title;
   reactionCounterSpan.innerHTML = post.reactions_count;
   reactionText.innerHTML = "Reaction";
