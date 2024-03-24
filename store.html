@@ -4,11 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Publicación</title>
-    <script src="./js/store.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <title>DEV Community</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
+    <script type="module" src="./js/store.js"></script>
 </head>
 
 <body>
+    <header class="header">
+        <div class="header-container">
+            <span class="inline-block d-md-none mr-2">
+                <button class="btn-hamburger mx-2 my-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                        aria-labelledby="ak60fy7nypgqj4u6e6oam7guhmm7lo0e">
+                        <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+                    </svg>
+                </button>
+            </span>
+            <div class="site-logo">
+                <a href="/">
+                    <img class="site-logo-img"
+                    src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+                    alt="DEV Community">
+                </a>
+            </div>
+            <div class="d-flex items-center h-100 ml-auto">
+                <!-- <button class="btn-icon d-sm-none position-relative mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"
+                        class="icon" focusable="false">
+                        <path
+                            d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z">
+                        </path>
+                    </svg>
+                </button> -->
+                <div class="d-flex mr-2">
+                    <a href="/store.html" class="my-auto create-account">
+                        Create post
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <h1>Publicar Contenido</h1>
     <form id="storeForm">
         <label for="titulo">Título</label><br>

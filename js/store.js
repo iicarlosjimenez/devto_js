@@ -1,3 +1,5 @@
+import { storePost } from './fetch.js';
+
 document.addEventListener('DOMContentLoaded', () => {
    document.getElementById('storeForm').addEventListener('submit', (event) => {
       event.preventDefault();
@@ -14,20 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
          content: contenido
       };
 
-      // Crear las opciones para la solicitud POST
-      const requestOptions = {
-         method: 'POST',
-         headers: {
-            'Content-Type': 'application/json'
-         },
-         body: JSON.stringify(data)
-      };
-
-      // Realizar la solicitud POST
-      fetch("https://devto-api.kodinc.dev/api/articulos", requestOptions)
-         .then(response => response.json())
-         .then(result => console.log(result))
-         .catch(error => console.log('error', error));
+      storePost(data).then((data) => {
+         if (data.id) {
+            window.location.href = "/";
+         } else {
+            console.log(data)
+         }
+      })
+      .catch((error) => {
+         // Manejar cualquier error al obtener los datos de la API
+         console.error("Error al obtener los datos de la API:", error);
+      }); 
    });
 });
 
