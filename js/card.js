@@ -29,18 +29,17 @@ function createPost(post) {
   const mainContainer = document.createElement("div");
   const buttonsContainer = document.createElement("div");
   const editButton = document.createElement("a");
-  const deleteButton = document.createElement("button");
+  const deleteButton = document.createElement("a");
 
   // Add all classes, atributes and ID's
 
   // Boton Editar
   editButton.id = "editPost";
-  editButton.href = "#";
+  editButton.href = `/store.html?id=${post.id}`;
   editButton.type = "button";
   editButton.innerHTML = "Editar";
   // Boton Borrar
   deleteButton.id = "deletePost";
-  deleteButton.href = "./";
   deleteButton.type = "button";
   deleteButton.innerHTML = "Eliminar";
   // Boton Container
