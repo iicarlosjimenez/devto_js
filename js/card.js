@@ -1,25 +1,4 @@
-import { fetchData } from './fetch.js'
-
-fetchData()
-  .then(data => {
-    // Verificar si los datos son válidos antes de iterar sobre ellos
-    if (Array.isArray(data)) {
-      // Iterar sobre los datos obtenidos
-      data.forEach(post => {
-        // Llamar a la función createPost para crear un post con los datos de la API
-        createPost(post);
-      });
-    } else {
-      console.error('Los datos de la API no son válidos:', data);
-    }
-  })
-  .catch(error => {
-    // Manejar cualquier error al obtener los datos de la API
-    console.error('Error al obtener los datos de la API:', error);
-  }); 
-
-let container = document.querySelector('.posts')
-
+let container = document.getElementById("posts-container");
 function createPost(post){
 
     // create all elements needed
@@ -134,7 +113,7 @@ function createPost(post){
     identionTitle.innerHTML = post.title
     reactionCounterSpan.innerHTML = post.reactions_count
     reactionText.innerHTML = 'Reaction'
-    addComment.innerHTML = 'Add Comment'
+    addComment.innerHTML = post.comments_count + ' comments' ?? 'Add Comment';
     minReadCounterSpan.innerHTML = post.reading_time_minutes
     minReadP.innerHTML = 'Min Read'
 
@@ -172,4 +151,4 @@ function createPost(post){
     container.append(box)
 }
 
-export {createPost}
+export { createPost }
