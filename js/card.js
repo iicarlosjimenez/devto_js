@@ -35,11 +35,13 @@ function createPost(post) {
 
   // Boton Editar
   editButton.id = "editPost";
+  editButton.classList.add('editButton')
   editButton.href = `/store.html?id=${post.id}`;
   editButton.type = "button";
   editButton.innerHTML = "Editar";
   // Boton Borrar
   deleteButton.id = "deletePost";
+  deleteButton.classList.add('deleteButton')
   deleteButton.type = "button";
   deleteButton.innerHTML = "Eliminar";
   // Boton Container

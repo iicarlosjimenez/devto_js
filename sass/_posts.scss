@@ -94,19 +94,35 @@
             justify-content: center;
             gap: 10px;
 
-            & a { 
-               display: flex;
-               align-items: center;
-               justify-content: center;
+            & .editButton {
+               align-self: flex-end;
+               padding: 0.5rem ;
+               color: rgba($blue-700, 1);
+               border: 1px solid rgba($blue-700, 1);
                text-decoration: none;
-               width: 80px;
-               height: 30px;
-               background-color: blue;
-               color: white;
                border-radius: $border-radius-1;
+               &:hover {
+               text-decoration: underline;
+               color: white;
+               background-color: rgba($blue-700, 1);
+               cursor: pointer;
+               }
             }
-         }
-          
+            & .deleteButton {
+               align-self: flex-end;
+               padding: 0.5rem ;
+               color: rgb(255, 113, 113);
+               border: 1px solid rgb(255, 113, 113);
+               text-decoration: none;
+               border-radius: $border-radius-1;
+
+               &:hover {
+               text-decoration: underline;
+               color: white;
+               background-color: rgb(255, 113, 113);
+               cursor: pointer;
+               }
+            }
          }
 
          &:hover {
@@ -215,7 +231,7 @@
          }
       }
    }
-
+}
 .icon-bookmark:hover {
    fill: rgba($blue-700, 1);
 }
