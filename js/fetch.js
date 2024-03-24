@@ -47,8 +47,8 @@ const storePost = async (data) => {
 } 
 
 //Realizar solicitud de actualizar post 
-const updatePost = async (data) => {
-  let endpoint = "https://devto-api.kodinc.dev/api/articulos/";
+const updatePost = async (data, id) => {
+  let endpoint = "https://devto-api.kodinc.dev/api/articulos/" + id; // le falta el id
   const requestOptions = {
     method: 'PUT',
     headers: {

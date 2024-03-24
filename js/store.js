@@ -1,4 +1,4 @@
-import { storePost, getUsers } from "./fetch.js";
+import { storePost, getUsers, updatePost } from "./fetch.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const formulario = document.getElementById("storeForm");
@@ -37,34 +37,39 @@ document.addEventListener("DOMContentLoaded", () => {
       title: titulo,
       content: contenido,
     };
-    //Al momento de dar click en "submit", 
-    // Crear las opciones para la solicitud POST
-    storePost(data)
-      .then((data) => {
-        if (data.id) {
-          window.location.href = "/";
-        } else {
-          console.log(data);
-        }
-      })
-      .catch((error) => {
-        // Manejar cualquier error al obtener los datos de la API
-        console.error("Error al obtener los datos de la API:", error);
-      });
 
+    // Si tenemos el id editamos sino publicamos
+    // Consultar el parámetro 'id' de la url
+    const id = new URLSearchParams(window.location.search).get('id')
+    if (id) {
       //Crear las opciones para la solicitud PUT
-      updatePost(data)
-      .then((data) => {
-        if (data.id) {
-          window.location.href = "/";
-        } else {
-          console.log(data);
-        }
-      })
-      .catch((error) => {
-        // Manejar cualquier error al obtener los datos de la API
-        console.error("Error al obtener los datos de la API:", error);
-      });
+      updatePost(data, id)
+        .then((data) => {
+          if (data.id) {
+            window.location.href = "/";
+          } else {
+            console.log(data);
+          }
+        })
+        .catch((error) => {
+          // Manejar cualquier error al obtener los datos de la API
+          console.error("Error al obtener los datos de la API:", error);
+        });
+    } else {
+      // Crear las opciones para la solicitud POST
+      storePost(data)
+        .then((data) => {
+          if (data.id) {
+            window.location.href = "/";
+          } else {
+            console.log(data);
+          }
+        })
+        .catch((error) => {
+          // Manejar cualquier error al obtener los datos de la API
+          console.error("Error al obtener los datos de la API:", error);
+        });
+    }
   });
 
   // Consultar el parámetro 'id' de la url
