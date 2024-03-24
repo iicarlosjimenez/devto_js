@@ -46,5 +46,20 @@ const storePost = async (data) => {
   }
 }
 
-export { getPosts, storePost }
+  
+async function getUsers() {
+  try {
+    const response = await fetch('https://devto-api.kodinc.dev/api/users');
+    if (!response.ok) {
+      throw new Error('Error al obtener la información de usuarios. Código de estado: ' + response.status);
+    }
+    const usuarios = await response.json();
+    return usuarios;
+  } catch (error) {
+    console.error('Ocurrió un error:', error);
+    return null;
+  }
+}
+  // Llamar a la función para obtener los datos
+export { getPosts,getUsers,storePost }
 
