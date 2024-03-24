@@ -1,33 +1,42 @@
-html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formulario de Publicación</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Publicación</title>
+    <script src="./js/store.js"></script>
 </head>
+
 <body>
-<h1>Publicar Contenido</h1>
-<form action="/publicar" method="post">
-    <label for="titulo">Título:</label><br>
-    <input type="text" id="titulo" name="titulo" required><br><br>
-    
-    <label for="contenido">Contenido:</label><br>
-    <textarea id="contenido" name="contenido" rows="4" cols="50" required></textarea><br><br>
-    
-    <label for="usuario">Usuario:</label><br>
-    <select id="usuario" name="usuario" required>
-        <option value="usuario1">Usuario 1</option>
-        <option value="usuario2">Usuario 2</option>
-        <option value="usuario3">Usuario 3</option>
-        <option value="usuario4">Usuario 4</option>
-        <option value="usuario5">Usuario 5</option>
-        <option value="usuario6">Usuario 6</option>
-        <option value="usuario7">Usuario 7</option>
-        <option value="usuario8">Usuario 8</option>
-    </select><br><br>
-    
-    <button type="submit">Publicar</button>
-</form>
+    <h1>Publicar Contenido</h1>
+    <form id="storeForm">
+        <label for="titulo">Título</label><br>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+
+        <label for="contenido">Contenido</label><br>
+        <textarea id="contenido" name="contenido" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="usuario">Usuario</label><br>
+        <select id="usuario" name="usuario" required>
+            <option value>Selecciona un usuario</option>
+            <option value="1">Usuario 1</option>
+            <option value="2">Usuario 2</option>
+            <option value="3">Usuario 3</option>
+            <option value="4">Usuario 4</option>
+            <option value="5">Usuario 5</option>
+            <option value="6">Usuario 6</option>
+            <option value="7">Usuario 7</option>
+            <option value="8">Usuario 8</option>
+            <option value="9">Usuario 9</option>
+            <option value="10">Usuario 10</option>
+            <option value="11">Usuario 11</option>
+            <option value="12">Usuario 12</option>
+            <option value="13">Usuario 13</option>
+        </select><br><br>
+
+        <button type="submit">Publicar</button>
+    </form>
 </body>
+
 </html>
