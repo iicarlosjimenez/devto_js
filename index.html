@@ -7,13 +7,9 @@
     <title>DEV Community</title>
     <link rel="icon" type="image/x-icon"
         href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
-    <script src="./js/card.js" type="module"></script>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </head>
 <body>
-
-    <!-- Header (Yam) -->
-
     <header class="header">
         <div class="header-container">
             <span class="inline-block d-md-none mr-2">
@@ -25,11 +21,13 @@
                 </button>
             </span>
             <div class="site-logo">
-                <img class="site-logo-img"
+                <a href="/">
+                    <img class="site-logo-img"
                     src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
                     alt="DEV Community">
+                </a>
             </div>
-            <div class="header-search">
+            <!-- <div class="header-search">
                 <div class="fields">
                     <div class="field flex-1">
                         <input class="textfield" type="text" placeholder="Search...">
@@ -43,33 +41,25 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="d-flex items-center h-100 ml-auto">
-                <button class="btn-icon d-sm-none position-relative mr-2">
+                <!-- <button class="btn-icon d-sm-none position-relative mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" class="icon"
                         focusable="false">
                         <path
                             d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z">
                         </path>
                     </svg>
-                </button>
+                </button> -->
                 <div class="d-flex mr-2">
-                    <span class="d-none d-md-block">
-                        <a href="" class="link link-block mr-2 ml-auto">
-                            Log in
-                        </a>
-                    </span>
-                    <a href="" class="my-auto create-account">
-                        Create account
+                    <a href="/store.html" class="my-auto create-account">
+                        Create post
                     </a>
                 </div>
             </div>
         </div>
     </header>
     <section class="container m-md-2">
-        
-        <!--Aside (Sampayo)  -->
-
         <aside class="asideods d-none d-md-block mx-2 crayons-layout__sidebar-left">
             <div class="myCardInfo">
                 <h2 class="crayons-subtitle-2ods lh-tightods mb-4ods">
@@ -386,8 +376,6 @@
             </nav>
         </aside>
 
-        <!-- Main (Charly) -->
-
         <main class="posts">
             <header>
                 <nav>
@@ -396,53 +384,24 @@
                         <li class="tag-header">Latest</li>
                         <li class="tag-header">Top</li>
                     </ul>
+                    <form id="searchForm">
+                        <input type="date" name="fecha">
+                        <button type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" class="icon"
+                                focusable="false">
+                                <path
+                                    d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z">
+                                </path>
+                            </svg>
+                        </button>
+                    </form>
                 </nav>
             </header>
 
-            <article class="card post-section">
-                <div class="post-title">
-                    <div class="post-author">
-                        <div class="mainContainer">
-                            <img class="avatar radius-50" id="avatar" src="https://media.dev.to/cdn-cgi/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F167016%2Fcdae4c79-c7fe-4ea4-bb0c-ab68294041a1.PNG" alt="Avatar">
-                            <div class="post-title-info">
-                                <span id="name">Nick K</span><br>
-                                <span id="date">feb 10</span>
-                            </div>
-                        </div>
-
-                        <div class="buttonsContainer">
-                            <a id="editPost" href="#" type="button">Editar</a>
-                            <a id="deletePost" href="#" type="button">Eliminar</a>
-                        </div>
-                </div>
-                <div class="post-indention">
-                    <h2 class="title" id="title"> Ultimate production system </h2>
-                    <div class="bottom">
-                        <div class="details">
-                            <div class="card reactions">
-                                <section class="reactions-counter">
-                                    <span id="reaction-counter">1</span> <p class="d-none d-sm-contents">reaction</p>
-                                </section>
-                            </div>
-                            <div class="card comments">
-                                <img class="icon" src="./img/svg/icon-comment.svg" alt="comment">
-                                <span class="d-none d-sm-contents">Add Comment</span> 
-                            </div>
-                        </div>
-                        <div class="save">
-                            <span id="min-read-counter">4</span> <p> min read </p>
-                            <img src="/img/svg/icon-bookmark.svg" alt="icon-bookmark">
-                        </div>
-                    </div>
-                </div>
-            </article>
+            <section id="posts-container"></section>
         </main>
 
-        <!-- Sidebar (Gerardo) -->
-
         <div class="sidebar d-none d-lg-block mx-2">
-           
-            <!-- Primera seccion -->
             <section class="container1">
                 <div class="listSidebar">
                     <div class="firstPost">
@@ -479,7 +438,6 @@
                 </div>
            </section>
 
-           <!-- Segunda Sección -->
            <section class="container1 gap">
             <div class="listSidebar">
                 <div class="firstPost">
@@ -498,7 +456,6 @@
                 </div>
             </section>
 
-             <!-- Tercera seccion -->
             <section class="container2 gap">
                 <div class="title">
                     <h4>trending guides/resources</h4>
@@ -547,7 +504,6 @@
 
             </section>
 
-            <!-- Cuarta seccion -->
             <section class="container2 gap">
                  
                  <div class="title">
