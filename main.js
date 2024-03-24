@@ -37,13 +37,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }); 
    });
 })
-
-// Set posts 
-/*const setPosts = (posts) => {
-   let container = document.getElementById("posts-container");
-   container.innerHTML = "";
-   posts.forEach((post) => {
-      // Llamar a la función createPost para crear un post con los datos de la API
-      createPost(post);
-   });
-}*/
