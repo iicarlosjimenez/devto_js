@@ -1,5 +1,5 @@
 import { getPosts } from './js/fetch.js';
-import { createPost } from './js/card.js'
+import { createPost, setPosts } from './js/card.js'
 document.addEventListener('DOMContentLoaded', () => {
    getPosts().then((data) => {
       // Verificar si los datos son válidos antes de iterar sobre ellos
@@ -37,13 +37,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }); 
    });
 })
-
-// Set posts 
-const setPosts = (posts) => {
-   let container = document.getElementById("posts-container");
-   container.innerHTML = "";
-   posts.forEach((post) => {
-      // Llamar a la función createPost para crear un post con los datos de la API
-      createPost(post);
-   });
-}
