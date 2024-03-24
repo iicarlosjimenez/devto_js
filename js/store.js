@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
          .catch(error => console.log('error', error));
    });
 
-   // Consultar el parámetro de la url
+   // Consultar el parámetro 'id' de la url
    // Con ese id, consultar el endpoint para obtener la información de un usuario
-   // http
+   // 'https://devto-api.kodinc.dev/api/articulos?id=' + id
    // Una vez que responde el endpoint, cambiar el value de:
    // titulo, contenido y usuario
 });
