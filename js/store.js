@@ -37,9 +37,23 @@ document.addEventListener("DOMContentLoaded", () => {
       title: titulo,
       content: contenido,
     };
-
+    //Al momento de dar click en "submit", 
     // Crear las opciones para la solicitud POST
     storePost(data)
+      .then((data) => {
+        if (data.id) {
+          window.location.href = "/";
+        } else {
+          console.log(data);
+        }
+      })
+      .catch((error) => {
+        // Manejar cualquier error al obtener los datos de la API
+        console.error("Error al obtener los datos de la API:", error);
+      });
+
+      //Crear las opciones para la solicitud PUT
+      updatePost(data)
       .then((data) => {
         if (data.id) {
           window.location.href = "/";
@@ -65,12 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // titulo, contenido y usuario 
         document.getElementById('titulo').value = data.title
         document.getElementById('contenido').value = data.content
-        document.getElementById('usuario').value = data.user_id
-        //hacer una validacion donde el programa lea si es una publicacion nueva
-        //o si es solo actualizar datos 
-
+        document.getElementById('usuario').value= data.user_id
+        document.getElementById('usuario').disabled = "true"
       })
       .catch(error => console.log('error al obtener informacion', error))
+      
   } else {
     console.log("Id no encontrada")
   }
