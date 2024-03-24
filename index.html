@@ -7,6 +7,7 @@
     <title>DEV Community</title>
     <link rel="icon" type="image/x-icon"
         href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
+    <script src="./js/card.js" type="module"></script>
 </head>
 <body>
 
@@ -396,57 +397,44 @@
                     </ul>
                 </nav>
             </header>
-            <div class="card post-section">
-                <div class="post-content">
-                    <div class="post-title">
-                        <div class="post-meta">
-                            <div class="post-author">
-                                <img class="avatar radius-50" src="https://media.dev.to/cdn-cgi/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F167016%2Fcdae4c79-c7fe-4ea4-bb0c-ab68294041a1.PNG" alt="Avatar">
-                            </div>
+
+            <article class="card post-section">
+                <div class="post-title">
+                    <div class="post-author">
+                        <div class="mainContainer">
+                            <img class="avatar radius-50" id="avatar" src="https://media.dev.to/cdn-cgi/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F167016%2Fcdae4c79-c7fe-4ea4-bb0c-ab68294041a1.PNG" alt="Avatar">
                             <div class="post-title-info">
-                                <div>Nick K</div>
-                                <div>feb 10</div>
+                                <span id="name">Nick K</span><br>
+                                <span id="date">feb 10</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="post-indention">
-                        <div class="title">
-                            Ultimate production system
+
+                        <div class="buttonsContainer">
+                            <a id="editPost" href="#" type="button">Editar</a>
+                            <a id="deletePost" href="#" type="button">Eliminar</a>
                         </div>
-                        <div class="tags">
-                            <div class="card tag tag-productivity"># <span>productivity</span></div>
+                </div>
+                <div class="post-indention">
+                    <h2 class="title" id="title"> Ultimate production system </h2>
+                    <div class="bottom">
+                        <div class="details">
+                            <div class="card reactions">
+                                <section class="reactions-counter">
+                                    <span id="reaction-counter">1</span> <p class="d-none d-sm-contents">reaction</p>
+                                </section>
+                            </div>
+                            <div class="card comments">
+                                <img class="icon" src="./img/svg/icon-comment.svg" alt="comment">
+                                <span class="d-none d-sm-contents">Add Comment</span> 
+                            </div>
                         </div>
-                        <div class="bottom">
-                            <div class="details">
-                                <div class="card reactions">
-                                    <div class="reactions-icons">
-                                        <span class="reaction-icon">
-                                            <img src="https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg" width="24" height="24">
-                                        </span>
-                                    </div>
-                                    <div class="reactions-counter">
-                                        1 <span class="d-none d-sm-contents">reaction</span>
-                                    </div>
-                                </div>
-                                <div class="card comments">
-                                    <img class="icon" src="./img/svg/icon-comment.svg" alt="comment">
-                                    <span class="d-ruby">
-                                        <span class="d-none d-sm-contents">Add Comment</span>
-                                    </span> 
-                                </div>
-                            </div>
-                            <div class="save">
-                                4 min read 
-                                <svg class="icon icon-bookmark" xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true">
-                                    <path
-                                        d="M6.75 4.5h10.5a.75.75 0 01.75.75v14.357a.375.375 0 01-.575.318L12 16.523l-5.426 3.401A.375.375 0 016 19.607V5.25a.75.75 0 01.75-.75zM16.5 6h-9v11.574l4.5-2.82 4.5 2.82V6z">
-                                    </path>
-                                </svg>
-                            </div>
+                        <div class="save">
+                            <span id="min-read-counter">4</span> <p> min read </p>
+                            <img src="/img/svg/icon-bookmark.svg" alt="icon-bookmark">
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
         </main>
 
         <!-- Sidebar (Gerardo) -->
