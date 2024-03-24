@@ -24,18 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /*storePost(data)
-    .then((data) => {
-      if (data.id) {
-        window.location.href = "/";
-      } else {
-        console.log(data);
-      }
-    })
-    .catch((error) => {
-      // Manejar cualquier error al obtener los datos de la API
-      console.error("Error al obtener los datos de la API:", error);
-    });*/
   formulario.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -67,8 +55,36 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
    // Consultar el parámetro 'id' de la url
-   // Con ese id, consultar el endpoint para obtener la información de un usuario
-   // 'https://devto-api.kodinc.dev/api/articulos?id=' + id
-   // Una vez que responde el endpoint, cambiar el value de:
-   // titulo, contenido y usuario
-});
+      function obtenerParametroUrl(nombre) {
+         const urlParams = new URLSearchParams(window.location.search);
+         return urlParams.get(nombre);
+      }
+
+    const id = obtenerParametroUrl('id')
+    
+    if (id) {
+       // 'https://devto-api.kodinc.dev/api/articulos?id=' + id
+       // Con ese id, consultar el endpoint para obtener la información de un usuario
+       fetch ("https://devto-api.kodinc.dev/api/articulos?id=" + id)
+       .then((response) => response.json())
+       .then(data => {
+          // Una vez que responde el endpoint, cambiar el value de:
+          // titulo, contenido y usuario 
+          document.getElementById ('titulo').value = data.title
+         document.getElementById ('contenido').value = data.content
+         document.getElementById ('usuario').value = data.user_id
+         //hacer una validacion donde el programa lea si es una publicacion nueva
+         //o si es solo actualizar datos 
+
+      })
+      .catch (error => console.log ('error al obtener informacion', error))
+    }  else {
+      console.log("Id no encontrada")
+    }
+
+
+
+   
+
+
+}); 
