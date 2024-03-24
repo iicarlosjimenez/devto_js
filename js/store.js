@@ -24,18 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /*storePost(data)
-    .then((data) => {
-      if (data.id) {
-        window.location.href = "/";
-      } else {
-        console.log(data);
-      }
-    })
-    .catch((error) => {
-      // Manejar cualquier error al obtener los datos de la API
-      console.error("Error al obtener los datos de la API:", error);
-    });*/
   formulario.addEventListener("submit", (event) => {
     event.preventDefault();
 
