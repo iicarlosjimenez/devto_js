@@ -29,6 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
          .then(result => console.log(result))
          .catch(error => console.log('error', error));
    });
+
+   // Consultar el parámetro de la url
+   // Con ese id, consultar el endpoint para obtener la información de un usuario
+   // http
+   // Una vez que responde el endpoint, cambiar el value de:
+   // titulo, contenido y usuario
 });
 
 
