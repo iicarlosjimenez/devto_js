@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updatePost(data, id)
         .then((data) => {
           if (data.id) {
-            window.location.href = "/";
+            window.location.href = "./";
           } else {
             console.log(data);
           }
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       storePost(data)
         .then((data) => {
           if (data.id) {
-            window.location.href = "/";
+            window.location.href = "./";
           } else {
             console.log(data);
           }
