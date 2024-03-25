@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/store.css">
+    <title>DEV Community</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://res.cloudinary.com/practicaldev/image/fetch/s--E8ak4Hr1--/c_limit,f_auto,fl_progressive,q_auto,w_32/https://dev-to.s3.us-east-2.amazonaws.com/favicon.ico">
+    <script type="module" src="./js/store.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container"> 
+            <div class="create-post-container">
+                <a href="/">
+                    <img class="site-logo-img"
+                    src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+                    alt="DEV Community">
+                </a>
+                
+                <a href="/store.html" class="create-post">
+                    Create post
+                </a>
+            </div>
+
+            <a href="/" class="volver" type="button">
+                Volver
+            </a>
+
+        </div>
+    </header>
+
+    <section>
+        <form id="storeForm" class="form">
+            <h1>Publicar Contenido</h1>
+            <div class="content-container">
+            <input type="text" id="titulo" name="titulo" placeholder="New post title here...">
+
+            <textarea id="contenido" name="contenido" rows="4" cols="50" placeholder="Write your post content here..." required></textarea>
+            </div>
+
+            <div class="user-container">
+                <select id="usuario" name="usuario" required>
+                </select>
+
+                <button type="submit">Publicar</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
