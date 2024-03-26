@@ -36,7 +36,7 @@ function createPost(post) {
   // Boton Editar
   editButton.id = "editPost";
   editButton.classList.add('editButton')
-  editButton.href = `/store.html?id=${post.id}`;
+  editButton.href = `./store.html?id=${post.id}`;
   editButton.type = "button";
   editButton.innerHTML = "Editar";
   // Boton Borrar
