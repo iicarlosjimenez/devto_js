@@ -186,13 +186,15 @@ function createPost(post) {
   })
 }
 const setPosts = (posts) => {
-    let container = document.getElementById("posts-container");
     container.innerHTML = "";
-    posts.forEach((post) => {
-       // Llamar a la función createPost para crear un post con los datos de la API
-       createPost(post);
-    });
+    if (posts.length)
+        posts.forEach((post) => {
+            // Llamar a la función createPost para crear un post con los datos de la API
+            createPost(post);
+        });
+    else 
+        container.innerHTML = '<h2>Nada por mostrar ;(</h2>'
  }
 
 
-export { createPost, setPosts };
+export { setPosts };

@@ -72,7 +72,6 @@ const updatePost = async (data, id) => {
     console.error ("Hubo un problema con la solicitud fetch:", error)
   }
 }
-
   
 async function getUsers() {
   try {
@@ -87,6 +86,6 @@ async function getUsers() {
     return null;
   }
 }
-  // Llamar a la función para obtener los datos
+
 export { getPosts,getUsers,storePost,updatePost}
 
