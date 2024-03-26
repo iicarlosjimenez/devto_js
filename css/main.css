@@ -449,11 +449,11 @@ ul {
   justify-content: space-between;
   align-items: end;
 }
-.posts nav form {
+.posts nav div {
   display: flex;
   align-items: center;
 }
-.posts nav form input {
+.posts nav div input {
   cursor: pointer;
   background-color: #fff;
   border: 1.5px solid rgb(212, 212, 212);
@@ -468,14 +468,14 @@ ul {
   width: 100%;
   resize: vertical;
 }
-.posts nav form button[type=submit] {
+.posts nav div button[type=submit] {
   padding: 0.5rem;
   cursor: pointer;
   border: none;
   border-radius: 0.375rem;
   background-color: transparent;
 }
-.posts nav form button[type=submit]:hover {
+.posts nav div button[type=submit]:hover {
   background-color: rgba(29, 78, 216, 0.1);
   fill: #1d4ed8;
 }
