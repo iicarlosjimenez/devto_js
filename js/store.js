@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("usuario");
   const primera = document.createElement("option");
   primera.textContent = "Selecciona un usuario";
-  primera.setAttribute("disable", "");
+  primera.value = "";
   select.append(primera);
 
   getUsers().then((users) => {
